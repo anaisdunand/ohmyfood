@@ -1,0 +1,19 @@
+// Variables
+$first-color: #9356DC;
+$second-color: #FF79DA;
+$third-color: #99E2D0;
+$main-bg-color: #F3F3F3;
+$footer-bg-color: #353535;
+$main-font: 'Roboto';
+$title-font: 'Shrikhand';
+
+// Mixins
+@mixin title-style {
+    font-family: $title-font;
+    font-size: 28px;
+}
+
+body {
+    background: $main-bg-color;
+    font-family: $main-font;
+}
