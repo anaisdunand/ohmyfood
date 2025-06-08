@@ -2,8 +2,8 @@
 $first-color: #9356DC;
 $second-color: #FF79DA;
 $third-color: #99E2D0;
+$fourth-color: #353535;
 $main-bg-color: #F3F3F3;
-$footer-bg-color: #353535;
 $main-font: 'Roboto';
 $title-font: 'Shrikhand';
 
@@ -14,6 +14,42 @@ $title-font: 'Shrikhand';
 }
 
 body {
+    margin: 0;
     background: $main-bg-color;
     font-family: $main-font;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+// Header
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 1.88rem;
+    gap: 4.1rem;
+    width: 100%;
+    height: 3.94rem;
+    background: white;
+    &__link {
+        width: 17px;
+        height: 16px;
+    }
+    .link__icon {
+        font-size: 18px;
+        color: $fourth-color;
+    }
+    &__logo {
+        width: 162px;
+        height: 27.5px;
+        padding-top: 0.125rem;
+    }
+}
+
+.homepage {
+    .header__icon {
+        visibility: hidden;
+    }
 }
