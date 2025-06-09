@@ -143,3 +143,16 @@ p, h1, h2, h3 {
         margin: 1.69rem 0 3.56rem;
     }
 }
+
+.about {
+    padding: 3rem 1.25rem;
+    background: white;
+    &__title {
+        @include homepage-title;
+        padding-bottom: 1.5rem;
+    }
+    &__item {
+        display: flex;
+        margin-bottom: 1.25rem;
+    }
+}
