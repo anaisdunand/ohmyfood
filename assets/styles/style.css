@@ -14,7 +14,6 @@ a {
   align-items: center;
   padding: 0 1.88rem;
   gap: 4.1rem;
-  width: 100%;
   height: 3.94rem;
   background: white;
 }
@@ -22,7 +21,10 @@ a {
   width: 17px;
   height: 16px;
 }
-.header .link__icon {
+.header__link--hidden {
+  visibility: hidden;
+}
+.header__icon {
   font-size: 18px;
   color: #353535;
 }
@@ -30,8 +32,4 @@ a {
   width: 162px;
   height: 27.5px;
   padding-top: 0.125rem;
-}
-
-.homepage .header__icon {
-  visibility: hidden;
 }/*# sourceMappingURL=style.css.map */
