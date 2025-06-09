@@ -68,6 +68,10 @@ p, h1, h2, h3 {
 .footer__link--bold {
   font-weight: 500;
 }
+.footer__icon {
+  padding-right: 0.63rem;
+  font-size: 13px;
+}
 
 .hero {
   display: flex;
