@@ -145,14 +145,50 @@ p, h1, h2, h3 {
 }
 
 .about {
-    padding: 3rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1.25rem 3rem 2rem;
     background: white;
     &__title {
         @include homepage-title;
         padding-bottom: 1.5rem;
     }
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        background: $first-color;
+        border-radius: 50px;
+        @include text-style(500, 14.2px);
+        color: white;
+        position: relative;
+        right: 0.75rem;
+        top: 2.88rem;
+    }
     &__item {
         display: flex;
+        align-items: center;
+        justify-content: flex-start;
         margin-bottom: 1.25rem;
+        padding: 1.56rem 2.1rem;
+        width: 20.16rem;
+        box-sizing: border-box;
+        background: $main-bg-color;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        &-icon {
+            padding-right: 1.5rem;
+            font-size: 18px;
+            color:$fourth-color;
+            &--purple {
+                color: $first-color;
+            }
+        }
+        &-text {
+            @include text-style(500, 16px);
+            @include align;
+        }
     }
 }
