@@ -145,8 +145,7 @@ p, h1, h2, h3 {
 }
 
 .about {
-    display: flex;
-    flex-direction: column;
+    // bug d'espacement à régler ici
     padding: 3rem 1.25rem 3rem 2rem;
     background: white;
     &__title {
@@ -189,6 +188,45 @@ p, h1, h2, h3 {
         &-text {
             @include text-style(500, 16px);
             @include align;
+        }
+    }
+}
+
+.restaurants {
+    padding: 3rem 1.25rem 1.87rem;
+    &__title {
+        @include homepage_title;
+        margin-bottom: 1.25rem;
+    }
+    &__card {
+        width: 100%;
+        height: 15.7rem;
+        margin-bottom: 1.13rem;
+        background: white;
+        border-radius: 15px;
+        &-image {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            object-position: 50% 62%;
+            border-radius: 15px 15px 0 0;
+        }
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.56rem 0.75rem 0.81rem;
+            
+        }
+        &-title {
+            @include text-style(700, 18px);
+            padding-bottom: 0.31rem;
+        }
+        &-text {
+            @include text-style(300, 17px);
+        }
+        &-icon {
+            font-size: 24px;
         }
     }
 }
