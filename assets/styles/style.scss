@@ -153,23 +153,8 @@ p, h1, h2, h3 {
         @include homepage-title;
         padding-bottom: 1.5rem;
     }
-    &__number {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 24px;
-        height: 24px;
-        background: $first-color;
-        border-radius: 50px;
-        @include text-style(500, 14.2px);
-        color: white;
-        position: relative;
-        right: 0.75rem;
-        top: 2.88rem;
-    }
     &__item {
         display: flex;
-        align-items: center;
         justify-content: flex-start;
         margin-bottom: 1.25rem;
         padding: 1.56rem 2.1rem;
@@ -178,6 +163,25 @@ p, h1, h2, h3 {
         background: $main-bg-color;
         border-radius: 20px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        &-number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: $first-color;
+            border-radius: 50px;
+            @include text-style(500, 14.2px);
+            color: white;
+            position: relative;
+            right: 2.85rem;
+        }
+        &-content {
+            display: flex;
+            align-items: center;
+            position: relative;
+            right: 1.35rem;
+        }
         &-icon {
             padding-right: 1.5rem;
             font-size: 18px;
@@ -237,9 +241,10 @@ p, h1, h2, h3 {
 .menu {
     &__image {
         width: 100%;
+        height: 275px;
+        object-fit: cover;
         position: relative;
         z-index: 0;
-        overflow: hidden;
         // comment faire passer la photo dessous ?? pourquoi z-index ne marche pas ?
     }
     &__content {
