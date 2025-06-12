@@ -12,6 +12,7 @@ $title-font: 'Shrikhand';
 // Mixins
 @mixin menu-title {
     font-family: $title-font;
+    font-weight: 400;
     font-size: 28px;
 }
 @mixin text-style($weight, $size) {
@@ -228,5 +229,46 @@ p, h1, h2, h3 {
         &-icon {
             font-size: 24px;
         }
+    }
+}
+
+// Menu pages
+.menu {
+    &__image {
+        width: 100%;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        // comment faire passer la photo dessous ?? pourquoi z-index ne marche pas ?
+    }
+    &__content {
+        padding: 2rem 0.81rem 0.5rem;
+        position: relative;
+        bottom: 2rem;
+        z-index: 1;
+    }
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.75rem 1.88rem 0.25rem;
+    }
+    &__title {
+        @include menu-title;
+        @include align;
+    }
+    &__part {
+        padding-bottom: 2.5rem;
+        &-title {
+            @include text-style(300, 16px);
+            padding-bottom: 0.25rem;
+        }
+        &-underline {
+            width: 2.5rem;
+            height: 0.19rem;
+            background: $third-color;
+        }
+    }
+    &__item {
+        margin-top: 0.75rem;
     }
 }
