@@ -227,7 +227,8 @@ p, h1, h2, h3 {
             @include text-style(300, 17px);
         }
         &-icon {
-            font-size: 24px;
+            position: relative;
+            bottom: 0.4rem;
         }
     }
 }
