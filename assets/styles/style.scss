@@ -23,8 +23,9 @@ $title-font: 'Shrikhand';
     @include text-style(700, 24px);
 }
 @mixin button($padding-sides) {
+    display: block;
     padding: 1rem $padding-sides;
-    background: linear-gradient(158deg,rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);
+    background: linear-gradient(170deg, $second-color 0%, $first-color 100%);
     @include text-style(500, 16px);
     color: white;
     border-radius: 25px;
@@ -140,13 +141,12 @@ p, h1, h2, h3 {
         color: $fourth-color;
     }
     &__button {
-        @include button(1.19rem);
+        @include button(1.37rem);
         margin: 1.69rem 0 3.56rem;
     }
 }
 
 .about {
-    // bug d'espacement à régler ici
     padding: 3rem 1.25rem 3rem 2rem;
     background: white;
     &__title {
@@ -244,14 +244,14 @@ p, h1, h2, h3 {
         height: 275px;
         object-fit: cover;
         position: relative;
-        z-index: 0;
-        // comment faire passer la photo dessous ?? pourquoi z-index ne marche pas ?
+        margin-bottom: -3.7rem;
     }
     &__content {
-        padding: 2rem 0.81rem 0.5rem;
+        padding: 2rem 0.81rem 2.5rem;
         position: relative;
-        bottom: 2rem;
         z-index: 1;
+        background-color: $main-bg-color;
+        border-radius: 40px 40px 0 0;
     }
     &__heading {
         display: flex;
