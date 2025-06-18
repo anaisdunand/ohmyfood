@@ -2,9 +2,13 @@
 
 // Variables
 $first-color: #9356DC;
+$fc-lighter: color.scale($first-color, $lightness: 15%);
 $second-color: #FF79DA;
+$sc-lighter: color.scale($second-color, $lightness: 15%);
 $third-color: #99E2D0;
 $fourth-color: #353535;
+$button-color: linear-gradient(170deg, $second-color 0%, $first-color 100%);
+$bc-lighter: linear-gradient(170deg, $sc-lighter 0%, $fc-lighter 100%);
 $main-bg-color: #F3F3F3;
 $main-font: 'Roboto';
 $title-font: 'Shrikhand';
@@ -18,6 +22,7 @@ $title-font: 'Shrikhand';
 @mixin text-style($weight, $size) {
     font-weight: $weight;
     font-size: $size;
+    font-family: $main-font;
 }
 @mixin homepage-title {
     @include text-style(700, 24px);
@@ -25,11 +30,26 @@ $title-font: 'Shrikhand';
 @mixin button($padding-sides) {
     display: block;
     padding: 1rem $padding-sides;
-    background: linear-gradient(170deg, $second-color 0%, $first-color 100%);
+    background: $button-color;
     @include text-style(500, 16px);
     color: white;
     border-radius: 25px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+@mixin button-hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: $bc-lighter;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
 }
 @mixin align {
     padding-top: 0.15rem;
@@ -143,6 +163,17 @@ p, h1, h2, h3 {
     &__button {
         @include button(1.37rem);
         margin: 1.69rem 0 3.56rem;
+        position: relative;
+        transition: opacity 300ms ease-out;
+        &::after {
+            content: "Explorer nos restaurants";
+            @include button-hover;
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
     }
 }
 
