@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 1.88rem;
+    gap: 4.1rem;
+    height: 3.94rem;
+    background: white;
+    &__link {
+        width: 17px;
+        height: 16px;
+        &--hidden {
+            visibility: hidden;
+        }
+    }
+    &__icon {
+        font-size: 18px;
+        color: $fourth-color;
+        }
+    &__logo {
+        width: 162px;
+        height: 27.5px;
+        @include align;
+    }
+    &--shadow {
+        position: relative;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    }
+}

@@ -1,0 +1,135 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &__loc {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+        width: 100%;
+        background: color.adjust($fourth-color, $lightness: 71%);
+        color: $fourth-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &__text {
+        @include text-style(500, 16px);
+        @include align;
+    }
+    &__title {
+        @include homepage-title;
+        margin: 2.44rem 0 1rem;
+    }
+    &__subtitle {
+        @include text-style (300, 18px);
+        color: $fourth-color;
+    }
+    &__button {
+        @include button(1.37rem);
+        margin: 1.69rem 0 3.56rem;
+        transition: opacity 300ms ease-out;
+        &::after {
+            content: "";
+            @include button-hover;
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.about {
+    padding: 3rem 1.25rem 3rem 2rem;
+    background: white;
+    &__title {
+        @include homepage-title;
+        padding-bottom: 1.5rem;
+    }
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 1.25rem;
+        padding: 1.56rem 2.1rem;
+        width: 20.16rem;
+        box-sizing: border-box;
+        background: $main-bg-color;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        &-number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: $first-color;
+            border-radius: 50px;
+            @include text-style(500, 14.2px);
+            color: white;
+            position: relative;
+            right: 2.85rem;
+        }
+        &-content {
+            display: flex;
+            align-items: center;
+            position: relative;
+            right: 1.35rem;
+        }
+        &-icon {
+            padding-right: 1.5rem;
+            font-size: 18px;
+            color:$fourth-color;
+            &--purple {
+                color: $first-color;
+            }
+        }
+        &-text {
+            @include text-style(500, 16px);
+            @include align;
+        }
+    }
+}
+
+.restaurants {
+    padding: 3rem 1.25rem 1.87rem;
+    &__title {
+        @include homepage_title;
+        margin-bottom: 1.25rem;
+    }
+    &__card {
+        width: 100%;
+        height: 15.7rem;
+        margin-bottom: 1.13rem;
+        background: white;
+        border-radius: 15px;
+        &-image {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            object-position: 50% 62%;
+            border-radius: 15px 15px 0 0;
+        }
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.56rem 0.75rem 0.81rem;
+            
+        }
+        &-title {
+            @include text-style(700, 18px);
+            padding-bottom: 0.31rem;
+        }
+        &-text {
+            @include text-style(300, 17px);
+        }
+        &-icon {
+            position: relative;
+            bottom: 0.4rem;
+        }
+    }
+}

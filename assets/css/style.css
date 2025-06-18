@@ -52,7 +52,6 @@ p, h1, h2, h3 {
   font-family: "Shrikhand";
   font-weight: 400;
   font-size: 18px;
-  font-family: "Roboto";
   color: white;
   padding-bottom: 1rem;
 }
@@ -64,7 +63,6 @@ p, h1, h2, h3 {
 .footer__link {
   font-weight: 400;
   font-size: 16px;
-  font-family: "Roboto";
   color: white;
 }
 .footer__link--bold {
@@ -96,19 +94,16 @@ p, h1, h2, h3 {
 .hero__text {
   font-weight: 500;
   font-size: 16px;
-  font-family: "Roboto";
   padding-top: 0.15rem;
 }
 .hero__title {
   font-weight: 700;
   font-size: 24px;
-  font-family: "Roboto";
   margin: 2.44rem 0 1rem;
 }
 .hero__subtitle {
   font-weight: 300;
   font-size: 18px;
-  font-family: "Roboto";
   color: #353535;
 }
 .hero__button {
@@ -117,19 +112,16 @@ p, h1, h2, h3 {
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
   font-weight: 500;
   font-size: 16px;
-  font-family: "Roboto";
   color: white;
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  margin: 1.69rem 0 3.56rem;
   position: relative;
+  z-index: 0;
+  margin: 1.69rem 0 3.56rem;
   transition: opacity 300ms ease-out;
 }
 .hero__button::after {
-  content: "Explorer nos restaurants";
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  content: "";
   width: 100%;
   height: 100%;
   background: linear-gradient(170deg, #ff8de0 0%, #a36fe1 100%);
@@ -138,7 +130,7 @@ p, h1, h2, h3 {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
   opacity: 0;
 }
 .hero__button:hover::after {
@@ -152,7 +144,6 @@ p, h1, h2, h3 {
 .about__title {
   font-weight: 700;
   font-size: 24px;
-  font-family: "Roboto";
   padding-bottom: 1.5rem;
 }
 .about__item {
@@ -176,7 +167,6 @@ p, h1, h2, h3 {
   border-radius: 50px;
   font-weight: 500;
   font-size: 14.2px;
-  font-family: "Roboto";
   color: white;
   position: relative;
   right: 2.85rem;
@@ -198,7 +188,6 @@ p, h1, h2, h3 {
 .about__item-text {
   font-weight: 500;
   font-size: 16px;
-  font-family: "Roboto";
   padding-top: 0.15rem;
 }
 
@@ -208,7 +197,6 @@ p, h1, h2, h3 {
 .restaurants__title {
   font-weight: 700;
   font-size: 24px;
-  font-family: "Roboto";
   margin-bottom: 1.25rem;
 }
 .restaurants__card {
@@ -236,13 +224,11 @@ p, h1, h2, h3 {
 .restaurants__card-title {
   font-weight: 700;
   font-size: 18px;
-  font-family: "Roboto";
   padding-bottom: 0.31rem;
 }
 .restaurants__card-text {
   font-weight: 300;
   font-size: 17px;
-  font-family: "Roboto";
 }
 .restaurants__card-icon {
   position: relative;
@@ -281,7 +267,6 @@ p, h1, h2, h3 {
 .menu__part-title {
   font-weight: 300;
   font-size: 16px;
-  font-family: "Roboto";
   padding-bottom: 0.25rem;
 }
 .menu__part-underline {
@@ -302,18 +287,15 @@ p, h1, h2, h3 {
 .menu__item-title {
   font-weight: 500;
   font-size: 18px;
-  font-family: "Roboto";
   padding-bottom: 0.31rem;
 }
 .menu__item-subtitle {
   font-weight: 300;
   font-size: 15px;
-  font-family: "Roboto";
 }
 .menu__item-price {
   font-weight: 700;
   font-size: 15px;
-  font-family: "Roboto";
   color: #353535;
 }
 .menu__button {
@@ -322,9 +304,10 @@ p, h1, h2, h3 {
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
   font-weight: 500;
   font-size: 16px;
-  font-family: "Roboto";
   color: white;
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 0;
   margin: 0 calc(50% - 5.81rem);
 }

@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: $fourth-color;
+    padding: 1.37rem 1.56rem;
+    &__logo {
+        font-family: $title-font;
+        @include text-style(400, 18px);
+        color: white;
+        padding-bottom: 1rem;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.44rem;
+    }
+    &__link {
+        @include text-style(400, 16px);
+        color: white;
+        &--bold {
+            font-weight: 500;
+        }
+    }
+    &__icon {
+        padding-right: 0.63rem;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,62 @@
+.menu {
+    &__image {
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
+        position: relative;
+        margin-bottom: -3.7rem;
+    }
+    &__content {
+        padding: 2rem 0.81rem 2.5rem;
+        position: relative;
+        z-index: 1;
+        background-color: $main-bg-color;
+        border-radius: 40px 40px 0 0;
+    }
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.75rem 1.88rem 0.25rem;
+    }
+    &__title {
+        @include menu-title;
+        @include align;
+    }
+    &__part {
+        padding-bottom: 2.5rem;
+        &-title {
+            @include text-style(300, 16px);
+            padding-bottom: 0.25rem;
+        }
+        &-underline {
+            width: 2.5rem;
+            height: 0.19rem;
+            background: $third-color;
+        }
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 0.75rem;
+        padding: 0.87rem 0.94rem 0.81rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.10);
+        &-title {
+            @include text-style(500, 18px);
+            padding-bottom: 0.31rem;
+        }
+        &-subtitle {
+            @include text-style(300, 15px);
+        }
+        &-price {
+            @include text-style(700, 15px);
+            color: $fourth-color;
+        }
+    }
+    &__button {
+        @include button(3.06rem);
+        margin: 0 calc(50% - 5.81rem);
+    }
+}

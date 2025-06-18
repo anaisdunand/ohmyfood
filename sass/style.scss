@@ -1,0 +1,25 @@
+@use 'sass:color';
+
+@import 'settings/variables';
+@import 'settings/mixins';
+
+// General
+body {
+    margin: 0;
+    background: $main-bg-color;
+    font-family: $main-font;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+p, h1, h2, h3 {
+    margin: 0;
+}
+
+@import 'modules/header';
+@import 'modules/footer';
+@import 'pages/homepage.scss';
+@import 'pages/menus.scss';
