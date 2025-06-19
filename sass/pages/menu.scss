@@ -47,6 +47,7 @@
     }
     &__part {
         width: 100%;
+        max-width: 39.63rem;
         padding-bottom: 2.5rem;
         &-title {
             @include text-style(300, 16px);
@@ -65,7 +66,6 @@
         margin-top: 0.75rem;
         padding: 0.87rem 0.94rem 0.81rem;
         width: 100%;
-        max-width: 39.63rem;
         box-sizing: border-box;
         background: white;
         border-radius: 15px;

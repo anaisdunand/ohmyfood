@@ -453,6 +453,7 @@ p, h1, h2, h3 {
 }
 .menu__part {
   width: 100%;
+  max-width: 39.63rem;
   padding-bottom: 2.5rem;
 }
 .menu__part-title {
@@ -472,7 +473,6 @@ p, h1, h2, h3 {
   margin-top: 0.75rem;
   padding: 0.87rem 0.94rem 0.81rem;
   width: 100%;
-  max-width: 39.63rem;
   box-sizing: border-box;
   background: white;
   border-radius: 15px;
