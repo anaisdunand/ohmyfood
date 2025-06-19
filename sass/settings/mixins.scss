@@ -36,6 +36,11 @@
 @mixin align {
     padding-top: 0.15rem;
 }
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @mixin footer-flex($width, $gap) {
     display: flex;
     flex-direction: column;
