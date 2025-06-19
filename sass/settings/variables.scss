@@ -3,6 +3,7 @@ $fc-lighter: color.scale($first-color, $lightness: 15%);
 $second-color: #FF79DA;
 $sc-lighter: color.scale($second-color, $lightness: 15%);
 $third-color: #99E2D0;
+$tc-darker: color.adjust($third-color, $saturation: 68%, $lightness: -48%);
 $fourth-color: #353535;
 $button-color: linear-gradient(170deg, $second-color 0%, $first-color 100%);
 $bc-lighter: linear-gradient(170deg, $sc-lighter 0%, $fc-lighter 100%);

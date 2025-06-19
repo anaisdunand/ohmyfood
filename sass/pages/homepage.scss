@@ -171,6 +171,24 @@
         height: 100%;
         background: white;
         border-radius: 15px;
+        position: relative;
+        &--new {
+            &::after {
+                content:"Nouveau";
+                position: absolute;
+                top: 0.81rem;
+                right: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 5rem;
+                height: 1.81rem;
+                background: $third-color;
+                border-radius: 2px;
+                @include text-style(500, 14px);
+                color: $tc-darker;
+            }
+        }
         &-image {
             width: 100%;
             height: 70%;
