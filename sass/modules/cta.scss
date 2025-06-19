@@ -1,0 +1,15 @@
+.cta {
+    @include button;
+    &--bigger {
+        padding: 1rem 1.37rem;
+    }
+    &::after {
+        content: "";
+        @include button-hover;
+    }
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+}

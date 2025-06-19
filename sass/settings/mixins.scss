@@ -10,9 +10,9 @@
 @mixin homepage-title {
     @include text-style(700, 24px);
 }
-@mixin button($padding-sides) {
+@mixin button {
     display: block;
-    padding: 1rem $padding-sides;
+    padding: 1rem 3.06rem;
     background: $button-color;
     @include text-style(500, 16px);
     color: white;

@@ -83,7 +83,6 @@
         }
     }
     &__button {
-        @include button(3.06rem);
         margin: 0 calc(50% - 5.81rem);
     }
 }

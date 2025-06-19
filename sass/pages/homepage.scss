@@ -34,20 +34,10 @@
         color: $fourth-color;
     }
     &__button {
-        @include button(1.37rem);
         margin: 1.69rem 0 3.56rem;
         transition: opacity 300ms ease-out;
         @media (min-width: 1024px) {
             margin: 1.88rem 0;
-        }
-        &::after {
-            content: "";
-            @include button-hover;
-        }
-        &:hover {
-            &::after {
-                opacity: 1;
-            }
         }
     }
 }
