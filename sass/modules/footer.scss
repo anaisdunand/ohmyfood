@@ -3,16 +3,26 @@
     flex-direction: column;
     background: $fourth-color;
     padding: 1.37rem 1.56rem;
+    @media (min-width: 1024px) {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 3.57rem 4.13rem 1.88rem;
+    }
     &__logo {
         font-family: $title-font;
         @include text-style(400, 18px);
         color: white;
         padding-bottom: 1rem;
+        @media (min-width: 1024px) {
+            padding: 0 0 0 5.63rem;
+        }
+    }
+    &__content {
+        @include footer-flex(768px, 2.75rem);
     }
     &__container {
-        display: flex;
-        flex-direction: column;
-        gap: 0.44rem;
+        @include footer-flex(1024px, 1rem);
     }
     &__link {
         @include text-style(400, 16px);

@@ -36,3 +36,12 @@
 @mixin align {
     padding-top: 0.15rem;
 }
+@mixin footer-flex($width, $gap) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.44rem;
+    @media (min-width: $width) {
+            flex-direction: row;
+            gap: $gap;
+        }
+}
