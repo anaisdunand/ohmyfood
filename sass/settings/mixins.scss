@@ -18,6 +18,16 @@
     font-weight: 400;
     font-size: 28px;
 }
+@mixin title-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+}
+@mixin checkmark-transition($property) {
+    transition: $property 250ms ease-out;
+}
 @mixin footer-flex($width, $gap) {
     display: flex;
     flex-direction: column;

@@ -493,10 +493,23 @@ p, h1, h2, h3 {
   height: 0.19rem;
   background: #99E2D0;
 }
+.menu__checkbox {
+  display: none;
+}
+.menu__checkbox:checked + .menu__item .menu__item-icon {
+  width: 3.5rem;
+}
+.menu__checkbox:checked + .menu__item .menu__item-price {
+  transform: translateX(-3.5rem);
+}
+.menu__checkbox:checked + .menu__item .menu__item-content {
+  padding-right: 4.25rem;
+}
 .menu__item {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  position: relative;
   margin-top: 0.75rem;
   padding: 0.87rem 0.94rem 0.81rem;
   width: 100%;
@@ -504,20 +517,46 @@ p, h1, h2, h3 {
   background: white;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.menu__item-content {
+  min-width: 0;
+  transition: padding-right 250ms ease-out;
 }
 .menu__item-title {
   font-weight: 500;
   font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
   padding-bottom: 0.31rem;
 }
 .menu__item-subtitle {
   font-weight: 300;
   font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
 }
 .menu__item-price {
   font-weight: 700;
   font-size: 15px;
   color: #353535;
+  transition: transform 250ms ease-out;
+}
+.menu__item-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  background: #99E2D0 url("/assets/images/icons/checkmark.svg") no-repeat center/1.25rem;
+  transition: width 250ms ease-out;
 }
 .menu__button {
   margin: 0 calc(50% - 5.81rem);
