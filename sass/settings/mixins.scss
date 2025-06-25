@@ -1,7 +1,10 @@
-@mixin menu-title {
-    font-family: $title-font;
-    font-weight: 400;
-    font-size: 28px;
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin align {
+    padding-top: 0.15rem;
 }
 @mixin text-style($weight, $size) {
     font-weight: $weight;
@@ -10,36 +13,10 @@
 @mixin homepage-title {
     @include text-style(700, 24px);
 }
-@mixin button {
-    display: block;
-    padding: 1rem 3.06rem;
-    background: $button-color;
-    @include text-style(500, 16px);
-    color: white;
-    border-radius: 25px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    position: relative;
-    z-index: 0;
-}
-@mixin button-hover {
-    width: 100%;
-    height: 100%;
-    background: $bc-lighter;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-    border-radius: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0;
-}
-@mixin align {
-    padding-top: 0.15rem;
-}
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin menu-title {
+    font-family: $title-font;
+    font-weight: 400;
+    font-size: 28px;
 }
 @mixin footer-flex($width, $gap) {
     display: flex;

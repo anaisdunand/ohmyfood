@@ -123,8 +123,11 @@ p, h1, h2, h3 {
 }
 
 .cta {
-  display: block;
-  padding: 1rem 3.06rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 11.63rem;
+  height: 3.13rem;
   background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
   font-weight: 500;
   font-size: 16px;
@@ -132,26 +135,30 @@ p, h1, h2, h3 {
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   position: relative;
-  z-index: 0;
+  z-index: 1;
+  transition: box-shadow 300ms ease-out;
 }
 .cta--bigger {
-  padding: 1rem 1.37rem;
+  width: 13.63rem;
 }
 .cta::after {
   content: "";
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(170deg, #ff8de0 0%, #a36fe1 100%);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-  border-radius: inherit;
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
-  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: inherit;
   opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+.cta:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 .cta:hover::after {
-  opacity: 1;
+  opacity: 0.15;
 }
 
 .hero {
@@ -392,8 +399,25 @@ p, h1, h2, h3 {
   font-size: 17px;
 }
 .restaurants__card-icon {
+  width: 22px;
+  height: 21px;
+  padding-bottom: 0.4rem;
+}
+
+.heart {
   position: relative;
-  bottom: 0.4rem;
+  left: 1.63rem;
+  opacity: 1;
+}
+.heart--filled {
+  position: relative;
+  opacity: 0;
+}
+.heart--filled:active {
+  opacity: 1;
+}
+.heart:active {
+  opacity: 0;
 }
 
 .menu {
