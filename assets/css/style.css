@@ -161,6 +161,19 @@ p, h1, h2, h3 {
   opacity: 0.15;
 }
 
+.heart-checkbox {
+  display: none;
+}
+.heart-checkbox + .heart-label {
+  display: inline-block;
+  width: 22px;
+  height: 21px;
+  background: url("/assets/images/icons/heart.svg");
+}
+.heart-checkbox:checked + .heart-label {
+  background: url("/assets/images/icons/heart-filled.svg");
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -399,25 +412,7 @@ p, h1, h2, h3 {
   font-size: 17px;
 }
 .restaurants__card-icon {
-  width: 22px;
-  height: 21px;
-  padding-bottom: 0.4rem;
-}
-
-.heart {
-  position: relative;
-  left: 1.63rem;
-  opacity: 1;
-}
-.heart--filled {
-  position: relative;
-  opacity: 0;
-}
-.heart--filled:active {
-  opacity: 1;
-}
-.heart:active {
-  opacity: 0;
+  margin: 0 0 0.4rem;
 }
 
 .menu {
@@ -468,11 +463,13 @@ p, h1, h2, h3 {
 .menu__heading {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 1.75rem 1.88rem 0.25rem;
 }
 @media (min-width: 768px) {
   .menu__heading {
     gap: 1.5rem;
+    padding: 0 0 2.5rem;
   }
 }
 .menu__title {

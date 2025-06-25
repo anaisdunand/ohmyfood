@@ -36,9 +36,11 @@
     &__heading {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 0 1.75rem 1.88rem 0.25rem;
         @media (min-width: 768px) {
             gap: 1.5rem;
+            padding: 0 0 2.5rem;
         }
     }
     &__title {
