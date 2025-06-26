@@ -1,7 +1,7 @@
 $first-color: #9356DC;
-$fc-lighter: color.scale($first-color, $lightness: 15%);
+$fc-lighter: color.scale($first-color, $lightness: 20%);
 $second-color: #FF79DA;
-$sc-lighter: color.scale($second-color, $lightness: 15%);
+$sc-lighter: color.scale($second-color, $lightness: 20%);
 $third-color: #99E2D0;
 $tc-darker: color.adjust($third-color, $saturation: 68%, $lightness: -48%);
 $fourth-color: #353535;
@@ -11,3 +11,12 @@ $main-bg-color: #F3F3F3;
 $main-font: 'Roboto';
 $title-font: 'Shrikhand';
 $checkmark-width: 3.5rem;
+
+// Menu parts animation
+$part-duration: 600ms;
+$part-delay: 600ms;
+$max-parts: 3;
+$item-duration: 500ms;
+$item-delay: 500ms;
+$max-items: 4;
+$base-delay: ($max-items * $item-delay + $part-delay);
