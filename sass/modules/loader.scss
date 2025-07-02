@@ -6,34 +6,32 @@
     gap: 1rem;
     width: 100%; height: 100%;
     background: $main-bg-color;
-    animation: fade-out 400ms ease-in-out forwards;
-    animation-delay: 4600ms;
+    animation: fade-out 400ms ease-out 2600ms forwards;
     &__bubble {
         @include flex-center;
         position: relative;
         bottom: 3rem;
         width: 5rem; height: 5rem;
-        border: 2px solid white;
         box-sizing: border-box;
         border-radius: 50%;
         font-family: $title-font;
         font-size: 22px;
         color: white;
-        transform: scale(0.6);
+        background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5), transparent 40%);
         @for $i from 1 through 3 {
             &--#{$i} {
-                animation: pulse 4000ms ease-in-out forwards;
-                animation-delay: ($i - 1) * 300ms;
+                animation: spin 2400ms ease-in-out forwards;
+                animation-delay: ($i - 1) * 200ms;
             }
         }
         &--1 {
-            background: $first-color;
+            background-color: $second-color;
         }
         &--2 {
-            background: $second-color;
+            background-color: $first-color;
         }
         &--3 {
-            background: $third-color;
+            background-color: $third-color;
         }
     }
 }

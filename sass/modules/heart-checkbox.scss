@@ -4,6 +4,7 @@
     display: inline-block;
     width: 22px; height: 21px;
     background: url("/assets/images/icons/heart.svg");
+    cursor: pointer;
   }
   &:checked + .heart-label {
     background: url("/assets/images/icons/heart-filled.svg");
