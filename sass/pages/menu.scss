@@ -125,7 +125,7 @@
             top: 0; right: 0;
             width: 0; height: 100%;
             border-radius: 0 15px 15px 0;
-            background: $third-color url("/assets/images/icons/checkmark.svg") no-repeat center / 1.25rem;
+            background: $third-color url("../images/icons/checkmark.svg") no-repeat center / 1.25rem;
             @include checkmark-transition(width);
         }
     }

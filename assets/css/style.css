@@ -250,11 +250,11 @@ p, h1, h2, h3 {
   display: inline-block;
   width: 22px;
   height: 21px;
-  background: url("/assets/images/icons/heart.svg");
+  background: url("../images/icons/heart.svg");
   cursor: pointer;
 }
 .heart-checkbox:checked + .heart-label {
-  background: url("/assets/images/icons/heart-filled.svg");
+  background: url("../images/icons/heart-filled.svg");
 }
 
 .hero {
@@ -709,7 +709,7 @@ p, h1, h2, h3 {
   width: 0;
   height: 100%;
   border-radius: 0 15px 15px 0;
-  background: #99E2D0 url("/assets/images/icons/checkmark.svg") no-repeat center/1.25rem;
+  background: #99E2D0 url("../images/icons/checkmark.svg") no-repeat center/1.25rem;
   transition: width 250ms ease-out;
 }
 .menu__button {
