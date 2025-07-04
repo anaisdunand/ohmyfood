@@ -4,7 +4,6 @@ $third-color: #99E2D0;
 $tc-darker: color.adjust($third-color, $saturation: 68%, $lightness: -48%);
 $fourth-color: #353535;
 $button-color: linear-gradient(170deg, $second-color 0%, $first-color 100%);
-$bubble-color: linear-gradient(190deg, $second-color 5%, $first-color 50%, $third-color 100%);
 $main-bg-color: #F3F3F3;
 $main-font: 'Roboto';
 $title-font: 'Shrikhand';

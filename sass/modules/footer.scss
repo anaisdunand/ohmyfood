@@ -11,8 +11,7 @@
     }
     &__logo {
         font-family: $title-font;
-        @include text-style(400, 18px);
-        color: white;
+        @include text-style(400, 18px); color: white;
         padding-bottom: 1rem;
         @media (min-width: 1024px) {
             padding: 0 0 0 5.63rem;
@@ -25,8 +24,7 @@
         @include footer-flex(1024px, 1rem);
     }
     &__link {
-        @include text-style(400, 16px);
-        color: white;
+        @include text-style(400, 16px); color: white;
         &--bold {
             font-weight: 500;
         }
