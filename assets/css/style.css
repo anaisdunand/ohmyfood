@@ -428,29 +428,25 @@ p, h1, h2, h3 {
     gap: 6.25rem;
   }
 }
-.restaurants__link {
-  display: block;
+.restaurants__card {
+  position: relative;
+  width: 100%;
   height: 15.69rem;
+  background: white;
+  border-radius: 15px;
   margin-bottom: 1.13rem;
 }
 @media (min-width: 768px) {
-  .restaurants__link {
+  .restaurants__card {
     width: calc((100% - 3rem) / 2);
     margin-bottom: -1rem;
   }
 }
 @media (min-width: 1440px) {
-  .restaurants__link {
+  .restaurants__card {
     width: calc((100% - 6.25rem) / 2);
     margin-bottom: -3.12rem;
   }
-}
-.restaurants__card {
-  width: 100%;
-  height: 100%;
-  background: white;
-  border-radius: 15px;
-  position: relative;
 }
 .restaurants__card--new::after {
   content: "Nouveau";
@@ -479,8 +475,7 @@ p, h1, h2, h3 {
 }
 .restaurants__card-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   padding: 0.75rem 1.56rem 0.75rem 0.81rem;
 }
 .restaurants__card-title {
@@ -493,7 +488,9 @@ p, h1, h2, h3 {
   font-size: 17px;
 }
 .restaurants__card-icon {
-  margin: 0 0 0.4rem;
+  position: absolute;
+  right: 1.56rem;
+  bottom: 2.06rem;
 }
 
 .menu {
@@ -648,7 +645,7 @@ p, h1, h2, h3 {
 .menu__checkbox {
   display: none;
 }
-.menu__checkbox:checked + .menu__item .menu__item-icon {
+.menu__checkbox:checked + .menu__item .menu__item-checkmark {
   width: 3.5rem;
 }
 .menu__checkbox:checked + .menu__item .menu__item-price {
@@ -699,7 +696,7 @@ p, h1, h2, h3 {
   color: #353535;
   transition: transform 250ms ease-out;
 }
-.menu__item-icon {
+.menu__item-checkmark {
   position: absolute;
   top: 0;
   right: 0;

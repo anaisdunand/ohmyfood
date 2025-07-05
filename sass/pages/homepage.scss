@@ -133,9 +133,11 @@
             gap: 6.25rem;
         }
     }
-    &__link {
-        display: block;
-        height: 15.69rem;
+    &__card {
+        position: relative;
+        width: 100%; height: 15.69rem;
+        background: white;
+        border-radius: 15px;
         margin-bottom: 1.13rem;
         @media (min-width: 768px) {
             width: calc((100% - 3rem) / 2);
@@ -145,12 +147,6 @@
             width: calc((100% - 6.25rem) / 2);
             margin-bottom: -3.12rem;
         }
-    }
-    &__card {
-        width: 100%; height: 100%;
-        background: white;
-        border-radius: 15px;
-        position: relative;
         &--new {
             &::after {
                 content:"Nouveau";
@@ -171,8 +167,7 @@
         }
         &-content {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
             padding: 0.75rem 1.56rem 0.75rem 0.81rem;
             
         }
@@ -184,7 +179,8 @@
             @include text-style(300, 17px);
         }
         &-icon {
-            margin: 0 0 0.4rem;
+            position: absolute;
+            right: 1.56rem; bottom: 2.06rem;
         }
     }
 }

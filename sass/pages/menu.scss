@@ -76,7 +76,7 @@
     &__checkbox {
         display: none;
         &:checked + .menu__item {
-            .menu__item-icon {
+            .menu__item-checkmark {
                 width: $checkmark-width;
             }
             .menu__item-price {
@@ -116,7 +116,7 @@
             @include text-style(700, 15px); color: $fourth-color;
             @include checkmark-transition(transform);
         }
-        &-icon {
+        &-checkmark {
             position: absolute;
             top: 0; right: 0;
             width: 0; height: 100%;
