@@ -3,10 +3,11 @@
   & + .heart-label {
     display: inline-block;
     width: 22px; height: 21px;
-    background: url("../images/icons/heart.svg");
+    background-image: url("../images/icons/heart.svg");
     cursor: pointer;
+    transition: background-image 400ms ease-out;
   }
   &:checked + .heart-label {
-    background: url("../images/icons/heart-filled.svg");
+    background-image: url("../images/icons/heart-filled.svg");
   }
 }
