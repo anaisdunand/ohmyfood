@@ -1,0 +1,36 @@
+.heart {
+    &__checkbox {
+        display: none;
+        &:checked + .heart__label {
+            transform: scale(1.1);
+            & .heart__icon {
+                &--empty {
+                    opacity: 0;
+                }
+                &--filled {
+                    clip-path: inset(0% 0% 0% 0%);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__label {
+        width: 22px; height: 21px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    &__icon {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        object-fit: contain;
+        transition: all 250ms ease-out;
+        &--empty {
+            opacity: 1;
+        }
+        &--filled {
+            opacity: 0;
+            clip-path: inset(100% 0% 0% 0%)
+        }
+    }
+}

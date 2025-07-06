@@ -46,6 +46,9 @@
         @include menu-title;
         @include align;
     }
+    &__icon {
+        position: relative;
+    }
     &__part {
         width: 100%;
         max-width: 39.63rem;
